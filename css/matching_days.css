@@ -1,0 +1,49 @@
+
+/* STYLING HEADER SECTION */
+.header {
+  text-align: center;
+  border-bottom: 2px solid  #2c3e50;
+  box-shadow: 0px 5px 10px 0px  #5499c7;
+}
+.header h4 {
+margin-top: 10%;
+}
+/* STYLING HEADER SECTION */
+.week_days {
+  margin-top: 3%;
+  border: 2px solid #2c3e50;
+  box-sizing: border-box;
+}
+.week_days h5 {
+  padding: 10px;
+}
+.box{
+  margin: 2em;
+  margin-left: 4em;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;}
+.box h6{
+  border: 1px solid black;
+  padding: 20px;
+  opacity: 0.5;
+  background-color: inherit;
+}
+
+.enterDates {
+  margin-left: 3%;
+  margin: auto;
+  border: 2px solid #2c3e50;
+  box-sizing: border-box;
+}
+
+input[type='date']{
+  margin: 40px;
+  margin-left: 1em;
+  text-align: center;
+  border-radius: 1px;
+  opacity: inherit;
+}
+.dates {
+  margin-left: 40px;
+}
