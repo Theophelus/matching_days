@@ -23,6 +23,7 @@ var sameDay = function(d1, d2){
   // into dateOne and dateTwo
   return (setDate1(d1)== setDate2(d2));
 }
+
 var getBothDates = function(d1, d2){
 var weekDayMap = {};
 for(var i =0; i<weekdays.length; i++){
@@ -31,7 +32,6 @@ for(var i =0; i<weekdays.length; i++){
     dayName: dayIndex,
     dayValue: dayIndex
   };
-
   if(dayIndex == d1){
     Object.assign({
       color:'red'
@@ -40,7 +40,6 @@ for(var i =0; i<weekdays.length; i++){
       delete weekDayMap[dayIndex].d1;
     }
   }
-
   if(dayIndex == d2){
     Object.assign({
       color:'blue'
@@ -51,7 +50,6 @@ for(var i =0; i<weekdays.length; i++){
 }
 }
 return weekDayMap;
-
 };
 return {
   setDate1,

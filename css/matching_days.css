@@ -17,9 +17,12 @@ margin-top: 10%;
 .week_days h5 {
   padding: 10px;
 }
+.week {
+  margin: auto;
+}
 .box{
-  margin: 2em;
-  margin-left: 4em;
+  margin: auto;
+  margin-left: 0px;
   text-align: center;
   position: relative;
   box-sizing: border-box;}
