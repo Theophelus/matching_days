@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>Matching Days</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -23,10 +23,21 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/matching_days.css">
 
+  <!-- script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="js/matching_days_logic.js" charset="utf-8"></script>
+  <script src="js/matching_days.js" charset="utf-8"></script>
+  <script id="entry-template" type="text/x-handlebars-template">
+    {{#each days}}
+    <span>{{day}}</span>
+    {{/each}}
+  </script>
+
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-
 </head>
 <body>
 
@@ -39,35 +50,14 @@
       </div>
       <div class="week_days">
         <h5>DAYS OF THE WEEK</h5>
-        <div class="row">
-          <div class="box u-max-full-width">
-            <h6 class="u-pull-left">MONDAY</h6>
-          </div>
-           <div class="box u-max-full-width">
-            <h6 class="u-pull-left">TUESDAY</h6>
-          </div>
-          <div class="box u-max-full-width">
-            <h6 class="u-pull-left">WEDNSEDAY</h6>
-          </div>
-          <div class="box u-max-full-width">
-            <h6 class="u-pull-left">THURSDAY</h6>
-          </div>
-          <div class="box u-max-full-width">
-            <h6 class="u-pull-left">FRIDAY</h6>
-          </div>
-          <div class="box u-max-full-width">
-            <h6 class="u-pull-left">SATURDAY</h6>
-          </div>
-          <div class="box u-max-full-width">
-            <h6 class="u-pull-left">SUNDAY</h6>
-          </div>
+        <div class="row week">
 
         </div>
       </div>
       <div class="enterDates">
         <form class="" action="index.html" method="post">
-          DATE 1: <input type="date" name="dates" value="selectDates" class="dates">
-          DATE 2: <input type="date" name="dates" value="selectDates" class="dates">
+            DATE 1: <input type="date" name="dates" value="selectDates" class="dates">
+            DATE 2: <input type="date" name="dates" value="selectDates" class="dates">
         </form>
       </div>
     </div>
