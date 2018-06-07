@@ -47,6 +47,20 @@ input[type='date']{
   border-radius: 1px;
   opacity: inherit;
 }
+.label {
+  margin-left: 6em;
+}
 .dates {
   margin-left: 40px;
+}
+/* colors for days  */
+.red {
+background-color: red;}
+
+
+
+@media (max-width: 768px){
+  .label {
+    margin-left: 40px;
+  }
 }

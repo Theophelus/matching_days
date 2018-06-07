@@ -15,7 +15,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -31,7 +31,7 @@
   <script id="entry-template" type="text/x-handlebars-template">
     {{#each days}}
     <div class="box u-pull-left">
-      <h6 class="u-pull-left">{{this}}</h6>
+      <h6 class="u-pull-left {{color}}">{{dayName}}</h6>
     </div>
     {{/each}}
   </script>
@@ -58,8 +58,7 @@
       </div>
       <div class="enterDates">
         <form class="" action="index.html" method="post">
-            DATE 1: <input type="date" name="dates" value="selectDates" class="dates">
-            DATE 2: <input type="date" name="dates" value="selectDates" class="dates">
+            <label class="label">DATE 1: <input type="date" name="" value="" class="dates1"> DATE 2: <input type="date" name="" value="" class="dates2"></lable>
         </form>
       </div>
     </div>

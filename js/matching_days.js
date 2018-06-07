@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function(){
   // get reference for both enterDates
-  var week = document.querySelector('.week')
+  var week = document.querySelector('.week');
   var dates1 = document.querySelector('.dates1');
+  var dates2 = document.querySelector('.dates2');
   //get reference for script tag
   var templateSource = document.querySelector('#entry-template').innerHTML;
   //Compile
@@ -11,14 +12,24 @@ document.addEventListener('DOMContentLoaded', function(){
 
   window.addEventListener('load', function(){
     var daysTemplate = template({
-      days: newMatching_days.weekdays()
+      days: newMatching_days.getBothDates(newMatching_days.getDate1())
     });
     week.innerHTML = daysTemplate;
   });
-
-  // dates1.addEventListener('change', function(){
-  //   // var daysTemplate = template({
-  //   //
-  //   // });
-  // });
+  dates1.addEventListener('change', function(){
+    // var firstDate = newMatching_days.getDate1(dates1.value);
+    // var secondDate = newMatching_days.getDate2(dates2.value);
+    var daysTemplate = template({
+      days: newMatching_days.getBothDates(newMatching_days.getDate1(dates1.value), newMatching_days.getDate2(dates2.value))
+    });
+    week.innerHTML = daysTemplate;
+  });
+  dates2.addEventListener('change', function(){
+    // var firstDate = newMatching_days.getDate1(dates1.value);
+    // var secondDate = newMatching_days.getDate2(dates2.value);
+    var daysTemplate = template({
+      days: newMatching_days.getBothDates(newMatching_days.getDate1(dates1.value), newMatching_days.getDate2(dates2.value))
+    });
+    week.innerHTML = daysTemplate;
+  });
 });
