@@ -12,21 +12,17 @@ document.addEventListener('DOMContentLoaded', function(){
 
   window.addEventListener('load', function(){
     var daysTemplate = template({
-      days: newMatching_days.getBothDates(newMatching_days.getDate1())
+      days: newMatching_days.getBothDates()
     });
     week.innerHTML = daysTemplate;
   });
   dates1.addEventListener('change', function(){
-    // var firstDate = newMatching_days.getDate1(dates1.value);
-    // var secondDate = newMatching_days.getDate2(dates2.value);
     var daysTemplate = template({
       days: newMatching_days.getBothDates(newMatching_days.getDate1(dates1.value), newMatching_days.getDate2(dates2.value))
     });
     week.innerHTML = daysTemplate;
   });
   dates2.addEventListener('change', function(){
-    // var firstDate = newMatching_days.getDate1(dates1.value);
-    // var secondDate = newMatching_days.getDate2(dates2.value);
     var daysTemplate = template({
       days: newMatching_days.getBothDates(newMatching_days.getDate1(dates1.value), newMatching_days.getDate2(dates2.value))
     });

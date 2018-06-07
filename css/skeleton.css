@@ -24,6 +24,29 @@
 - Clearing
 - Media Queries
 */
+if(dayIndex == d1){
+   weekDayMap[dayIndex]= Object.assign({
+    color:'red'
+  },weekDayMap[dayIndex]);
+  if(sameDay(d1,d2)){
+    delete weekDayMap[dayIndex].d1;
+      weekDayMap[dayIndex] = Object.assign({
+        color: 'green'
+        },
+          weekDayMap[dayIndex]);
+      }
+}
+if(dayIndex == d2){
+  Object.assign({
+    color:'blue'
+  }, weekDayMap[dayIndex]);
+if(sameDay(d1,d2)){
+      delete weekDayMap[dayIndex].d2;
+      weekDayMap[dayIndex] = Object.assign({
+        color: 'green'
+      }, weekDayMap[dayIndex]);
+    };
+}
 
 
 /* Grid
