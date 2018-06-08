@@ -55,7 +55,11 @@ input[type='date']{
 }
 /* colors for days  */
 .red {
-background-color: red;}
+background-color: red;
+}
+.blue {
+  background-color: blue;
+}
 
 
 

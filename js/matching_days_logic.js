@@ -2,14 +2,14 @@ var Matching_days = function(){
 //Declare a list of days of the week
 const weekDays = ['Sunday','Monday','Tuesday','Wednseday','Thursday','Friday','Saturday'];
 var dateOne, dateTwo = '';
-var getDate1 = function(d1){
-  dateOne = new Date(d1);
+var getDate1 = function(dateOne){
+  dateOne = new Date(dateOne);
   dateOne = weekDays[dateOne.getDay()];
   return dateOne;
   }
 //Create a function  to get dateTwo
-var getDate2 = function(d2){
-  var dateTwo = new Date(d2);
+var getDate2 = function(dateTwo){
+  var dateTwo = new Date(dateTwo);
   dateTwo = weekDays[dateTwo.getDay()];
   return dateTwo;
 };
@@ -19,12 +19,17 @@ var sameDay = function(dateOne, dateTwo){
 }
 console.log(sameDay());
 
-var getBothDates = function(d1, d2){
+var getBothDates = function(dateOne, dateTwo){
 var weekDayMap = {};
 for(var i =0; i< weekDays.length; i++){
   var dayIndex = weekDays[i];
   weekDayMap[dayIndex] ={
     dayName: dayIndex
+  }
+  if(dayIndex == dateOne){
+    weekDayMap[dayIndex] = Object.assign({
+      color: 'red'
+    }, weekDayMap[dayIndex]);
   }
 }
 console.log(weekDayMap);
