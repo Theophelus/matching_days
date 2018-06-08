@@ -31,13 +31,18 @@ for(var i =0; i< weekDays.length; i++){
       color: 'red'
     }, weekDayMap[dayIndex]);
   }
-
   //Check if date2 if selected then assign color Blue
   if(dayIndex == dateTwo){
     weekDayMap[dayIndex] = Object.assign({
       color: 'blue'
     }, weekDayMap[dayIndex]);
-
+  }
+  if(dayIndex == dateOne && dayIndex == dateTwo){
+    // var removeColor = color;
+    delete weekDayMap[dayIndex].color;
+    weekDayMap[dayIndex] = Object.assign({
+      color: 'green'
+    }, weekDayMap[dayIndex]);
   }
 }
 console.log(weekDayMap);

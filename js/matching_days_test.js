@@ -1,4 +1,4 @@
-1describe('MATCHING DAYS WIDGET', function(){
+describe('MATCHING DAYS WIDGET', function(){
   it('should return Thursday if that date1 is selected', function(){
     var newMatchingDays = Matching_days();
     //newMatchingDays.setDate1 = ('7-05-2018');
@@ -21,12 +21,14 @@
   });
   it('should return color red if date1 is select', function(){
     var newMatching_days = Matching_days();
-    var one = newMatching_days.getDate1('2018-06-07');
-    var two = newMatching_days.getDate2('2018-06-07');
-    assert.deepEqual([{
-      dayName: 'Sunday',
-      color: 'red'
-    },]
-      , newMatching_days.getBothDates());
+    var one = newMatching_days.getDate1('2018-06-08');
+    console.log(newMatching_days.getBothDates(one));
+    assert.deepEqual({Friday: {color: "red", dayName: "Friday"},
+Monday:{dayName: "Monday"},
+Saturday: {dayName: "Saturday"},
+Sunday: {dayName: "Sunday"},
+Thursday: {dayName: "Thursday"},
+Tuesday: {dayName: "Tuesday"},
+Wednseday: {dayName: "Wednseday"}}, newMatching_days.getBothDates(one));
   });
 });
