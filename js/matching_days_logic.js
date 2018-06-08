@@ -31,6 +31,14 @@ for(var i =0; i< weekDays.length; i++){
       color: 'red'
     }, weekDayMap[dayIndex]);
   }
+
+  //Check if date2 if selected then assign color Blue
+  if(dayIndex == dateTwo){
+    weekDayMap[dayIndex] = Object.assgn({
+      color: 'blue'
+    }, weekDayMap[dayIndex]);
+
+  }
 }
 console.log(weekDayMap);
 return weekDayMap;
