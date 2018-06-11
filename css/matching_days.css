@@ -20,17 +20,16 @@ margin-top: 10%;
 .week {
   margin-left: 20px;;
 }
-.box{
+/* .box{
   margin: auto;
-  margin-left: 0px;
-  text-align: center;
-  position: relative;
-  box-sizing: border-box;}
+  margin-left: 0px; */
+
 .box h6{
+  text-align: center;
+  box-sizing: border-box;
   border: 1px solid black;
   padding: 20px;
   opacity: 0.5;
-  background-color: inherit;
 }
 
 .enterDates {
