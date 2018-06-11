@@ -18,18 +18,18 @@ margin-top: 10%;
   padding: 10px;
 }
 .week {
-  margin-left: 20px;;
+  margin-left: 20px;
+  margin-bottom: : 20px;
 }
-/* .box{
+.box{
   margin: auto;
-  margin-left: 0px; */
-
-.box h6{
+}
+h6{
   text-align: center;
   box-sizing: border-box;
   border: 1px solid black;
   padding: 20px;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .enterDates {
