@@ -40,7 +40,7 @@ describe('MATCHING DAYS WIDGET', function(){
     Thursday: {dayName: "Thursday"},
     Tuesday: {dayName: "Tuesday"}, Wednseday: {dayName: "Wednseday"}}, newMatchingDays.getBothDates(dateTwo));
   });
-  it('should check if date one and date two are selected, if selected assign color green', function(){
+  it('should check if same day of date one and date two are selected, if selected assign color green', function(){
     var newMatchingDays = Matching_days();
     var  dateOne = newMatchingDays.getDate1('2018-06-12');
     var dateTwo = newMatchingDays.getDate2('2018-06-12');
