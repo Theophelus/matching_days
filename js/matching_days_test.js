@@ -42,7 +42,7 @@ describe('MATCHING DAYS WIDGET', function(){
     Tuesday:{dayName: "Tuesday"},
     Wednseday:{dayName: "Wednseday"}}, newMatchingDays.getBothDates(dateOne,dateTwo));
   });
-  it('should highlight dateOne red and dateTwo blue, if doth dates are selected in different days', function(){
+  it('should highlight dateOne red and dateTwo blue, if doth dates are selected with different days', function(){
     var newMatchingDays = Matching_days();
     var  dateOne = newMatchingDays.getDate1('2018-06-11');
     var dateTwo = newMatchingDays.getDate2('2018-06-13');
