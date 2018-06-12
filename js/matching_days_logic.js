@@ -38,7 +38,6 @@ for(var i =0; i< weekDays.length; i++){
     }, weekDayMap[dayIndex]);
   }
   if(dayIndex == dateOne && dayIndex == dateTwo){
-    // var removeColor = color;
     delete weekDayMap[dayIndex].color;
     weekDayMap[dayIndex] = Object.assign({
       color: 'green'

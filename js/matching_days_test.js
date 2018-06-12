@@ -32,13 +32,27 @@ describe('MATCHING DAYS WIDGET', function(){
   });
   it('should check which day of the week is selected in date 2 and assign color Blue', function(){
     var newMatchingDays = Matching_days();
+    var dateOne = newMatchingDays.getDate1();
     var dateTwo = newMatchingDays.getDate2('2018-06-11');
-    assert.deepEqual({Friday:{dayName: "Friday"},
-    Monday:{color: "red", dayName: "Monday"},
+    assert.deepEqual({Friday: {dayName: "Friday"},
+    Monday:{color: "blue", dayName: "Monday"},
     Saturday:{dayName: "Saturday"},
     Sunday:{dayName: "Sunday"},
+    Thursday:{dayName: "Thursday"},
+    Tuesday:{dayName: "Tuesday"},
+    Wednseday:{dayName: "Wednseday"}}, newMatchingDays.getBothDates(dateOne,dateTwo));
+  });
+  it('should highlight dateOne red and dateTwo blue, if doth dates are selected in different days', function(){
+    var newMatchingDays = Matching_days();
+    var  dateOne = newMatchingDays.getDate1('2018-06-11');
+    var dateTwo = newMatchingDays.getDate2('2018-06-13');
+    assert.deepEqual({Friday: {dayName: "Friday"},
+    Monday: {color: "red", dayName: "Monday"},
+    Saturday: {dayName: "Saturday"},
+    Sunday: {dayName: "Sunday"},
     Thursday: {dayName: "Thursday"},
-    Tuesday: {dayName: "Tuesday"}, Wednseday: {dayName: "Wednseday"}}, newMatchingDays.getBothDates(dateTwo));
+    Tuesday: {dayName: "Tuesday"},
+    Wednseday: {color: "blue", dayName: "Wednseday"}}, newMatchingDays.getBothDates(dateOne, dateTwo));
   });
   it('should check if same day of date one and date two are selected, if selected assign color green', function(){
     var newMatchingDays = Matching_days();
